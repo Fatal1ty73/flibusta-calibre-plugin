@@ -59,11 +59,11 @@ def search_flibusta(url, query, web_url, max_results=10, timeout=60):
                         pass
                     elif 'http://opds-spec.org/acquisition/open-access' in rel:
                         if 'application/fb2+zip' in type:
-                            s.downloads['FB2'] = web_url + href
+                            s.downloads['FB2.ZIP'] = web_url + href
                         elif 'application/txt+zip' in type:
-                            s.downloads['TXT'] = web_url + href
+                            s.downloads['TXT.ZIP'] = web_url + href
                         elif 'application/html+zip' in type:
-                            s.downloads['HTML'] = web_url + href
+                            s.downloads['HTML.ZIP'] = web_url + href
                         elif 'application/x-mobipocket-ebook' in type:
                             s.downloads['MOBI'] = web_url + href
                         elif type:
@@ -74,7 +74,7 @@ def search_flibusta(url, query, web_url, max_results=10, timeout=60):
                                 s.downloads[ext] = web_url + href
                             elif ext2:
                                 ext2 = ext2[1:].upper().strip()
-                                s.downloads[ext2] = web_url + href
+                                s.downloads[ext2+".ZIP"] = web_url + href
             s.formats = ', '.join(s.downloads.keys()).strip()
 
             s.title = ' '.join(data.xpath('./*[local-name() = "title"]//text()')).strip()

@@ -3,7 +3,7 @@
 from __future__ import (unicode_literals, division, absolute_import, print_function)
 
 __license__ = 'GPL 3'
-__copyright__ = '2020, Fatal1ty73 https://github.com/Fatal1ty73'
+__copyright__ = '2022, Fatal1ty73 https://github.com/Fatal1ty73'
 __docformat__ = 'restructuredtext en'
 
 from calibre.customize import StoreBase
